@@ -9,3 +9,14 @@ func TestLengthOfLIS(t *testing.T) {
 		t.Error(nums, result)
 	}
 }
+
+func TestFindCheapestPrice(t *testing.T) {
+	result := 200
+	n, src, dst, k := 3, 0, 2, 1
+	flights := [][]int{
+		{0, 1, 100}, {1, 2, 100}, {0, 2, 500},
+	}
+	if result != FindCheapestPrice(n, flights, src, dst, k) {
+		t.Error("error")
+	}
+}
