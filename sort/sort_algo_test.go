@@ -30,6 +30,12 @@ func TestQuickSort(t *testing.T) {
 	if !checkSortResult(sortedNums, nums) {
 		t.Error(nums, sortedNums)
 	}
+	nums = []int{5, 4, 3, 2, 1}
+	sortedNums = []int{1, 2, 3, 4, 5}
+	sort.QuickSort(nums)
+	if !checkSortResult(sortedNums, nums) {
+		t.Error(nums, sortedNums)
+	}
 }
 
 func checkSortResult(sortedNums []int, resultNums []int) (flag bool) {

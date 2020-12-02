@@ -81,14 +81,33 @@ func majorityElementSimple(nums []int) int {
 面试题17.10 主要元素
 附加条件：时间复杂度为O(N)，空间复杂度为O(1)
 */
-func majorityElementHard(nums []int) int {
+func MajorityElementHard(nums []int) int {
 	numsLength := len(nums)
 	mainNum := -1
-	if numsLength == 1 {
-		mainNum = nums[0]
-	} else if numsLength == 2 {
-		if nums[0] == nums[1] {
-			mainNum = nums[0]
+	cnt := 0
+	for i := 0; i < numsLength; i ++ {
+		if cnt == 0 {
+			mainNum = nums[i]
+			cnt = 1
+		} else {
+			if mainNum == nums[i] {
+				cnt ++
+			} else {
+				cnt --
+			}
+		}
+	}
+	if cnt == 0 {
+		mainNum = -1
+	} else {
+		cnt = 0
+		for i := 0; i < numsLength; i ++ {
+			if mainNum == nums[i] {
+				cnt ++
+			}
+		}
+		if cnt * 2 < numsLength {
+			mainNum = -1
 		}
 	}
 	return mainNum
