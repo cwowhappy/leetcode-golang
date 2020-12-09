@@ -5,7 +5,7 @@ Problem997 找到小镇的法官
 时间复杂度: O(n)
 空间复杂度: O(n)
  */
-func findJudge(N int, trusts [][]int) int {
+func FindJudge(N int, trusts [][]int) int {
 	inDegrees := make([]int, N)
 	outDegrees := make([]int, N)
 	for i := 0; i < len(trusts); i ++ {
