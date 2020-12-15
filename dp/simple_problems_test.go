@@ -14,3 +14,11 @@ func TestClimbStairs(t *testing.T) {
 		t.Error()
 	}
 }
+
+func TestMinCostClimbingStairs(t *testing.T) {
+	costs := []int{0, 0, 1, 1}
+	result := 1
+	if result != MinCostClimbingStairs(costs) {
+		t.Error()
+	}
+}

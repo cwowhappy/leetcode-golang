@@ -2,13 +2,6 @@ package tree
 
 import "github.com/cwowhappy/leetcode-golang/util"
 
-
-type TreeNode struct {
-	Val int
-	Left *TreeNode
-	Right *TreeNode
-}
-
 /**
 Problem144 二叉树的前序遍历
  */
