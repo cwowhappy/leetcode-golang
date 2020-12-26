@@ -92,6 +92,24 @@ func Rob(nums []int) int {
 }
 
 
+/**
+Problem121
+ */
+func MaxProfit(prices []int) int {
+	pricesLen := len(prices)
+	if pricesLen == 0 {
+		return 0
+	}
+	curMaxProfit := 0
+	curBuyMaxProfit := -prices[0]
+	for i := 1; i < pricesLen; i ++ {
+		curMaxProfit = max2(curMaxProfit, curBuyMaxProfit + prices[i])
+		curBuyMaxProfit = max2(curBuyMaxProfit, -prices[i])
+	}
+	return curMaxProfit
+}
+
+
 func min2(a int, b int) int {
 	if a > b {
 		return b
