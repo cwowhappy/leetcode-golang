@@ -3,6 +3,7 @@ package main
 import "fmt"
 
 func main()  {
-	i := 0
-	fmt.Println(i, i^1)
+	nums := make([]int, 0, 10)
+
+	fmt.Println(len(nums), nums)
 }
