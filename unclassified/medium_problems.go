@@ -53,3 +53,10 @@ func JumpV2(nums []int) int {
 
 	return step
 }
+
+/**
+Problem 22
+ */
+func GenerateParenthesis(n int) []string {
+	return nil
+}
