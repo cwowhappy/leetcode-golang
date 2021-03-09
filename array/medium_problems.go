@@ -84,4 +84,9 @@ func CanReorderDoubled(A []int) bool {
 	return can
 }
 
-
+/**
+Problem1552 两球之间的磁力
+ */
+func P1552MaxDistance(positions []int, m int) int {
+	return 0
+}

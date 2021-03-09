@@ -1,8 +1,9 @@
 package main
 
-import "fmt"
+type StructA struct {
+	Value int
+}
 
 func main()  {
-	i := 0
-	fmt.Println(i, i^1)
 }
+
