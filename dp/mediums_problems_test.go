@@ -20,3 +20,28 @@ func TestFindCheapestPrice(t *testing.T) {
 		t.Error("error")
 	}
 }
+
+func TestMinHeightShelves(t *testing.T) {
+	books := [][]int{{1,1},{2,3},{2,3},{1,1},{1,1},{1,1},{1,2}}
+	shelfWidth := 4
+	result := 6
+	if result != MinHeightShelves(books, shelfWidth) {
+
+	}
+}
+
+func TestMatrixBlockSum(t *testing.T) {
+	K := 1
+	mat := [][]int{{1, 2, 3}, {4, 5, 6}, {7, 8, 9}}
+	t.Error(MatrixBlockSum(mat, K))
+}
+
+func TestFindTargetSumWays(t *testing.T) {
+	S := 3
+	nums := []int{1, 1, 1, 1, 1}
+	result := 5
+	realResult := FindTargetSumWays(nums, S)
+	if result != realResult {
+		t.Error(nums, S, result, realResult)
+	}
+}
