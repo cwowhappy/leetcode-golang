@@ -3,6 +3,39 @@ package tree
 import "github.com/cwowhappy/leetcode-golang/util"
 
 /**
+Problem110 平衡二叉树
+ */
+func IsBalanced(root *TreeNode) bool {
+	_, flag := recIsBalanced(root)
+	return flag
+}
+func recIsBalanced(root *TreeNode) (int, bool) {
+	if root == nil {
+		return 0, true
+	}
+	var flag = true
+	var height, lHeight, rHeight = 1, 0, 0
+	if root.Left != nil {
+		lHeight, flag = recIsBalanced(root.Left)
+	}
+	if flag && root.Right != nil {
+		rHeight, flag = recIsBalanced(root.Right)
+	}
+	if flag {
+		if lHeight - rHeight > 1 || rHeight - lHeight > 1 {
+			flag = false
+		} else {
+			if lHeight > rHeight {
+				height += lHeight
+			} else {
+				height += rHeight
+			}
+		}
+	}
+	return height, flag
+}
+
+/**
 Problem144 二叉树的前序遍历
  */
 func PreorderTraversal(root *TreeNode) []int {
