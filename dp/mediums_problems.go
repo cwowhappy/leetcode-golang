@@ -200,3 +200,33 @@ func FindTargetSumWays(nums []int, S int) int {
 	}
 	return targetV
 }
+
+/**
+https://leetcode-cn.com/problems/jian-sheng-zi-ii-lcof/
+*/
+func CuttingRope(n int) int {
+	if n == 2 {
+		return 1
+	}
+	if n == 3 {
+		return 2
+	}
+
+	value := 1
+	num := n / 3
+	switch n % 3 {
+	case 0:
+		value = 1
+	case 1:
+		value = 4
+		num -= 1
+	case 2:
+		value = 2
+	}
+
+	for i := 1; i <= num; i ++ {
+		value = value * 3 % 1000000007
+	}
+
+	return value
+}

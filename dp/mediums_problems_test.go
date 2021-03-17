@@ -45,3 +45,19 @@ func TestFindTargetSumWays(t *testing.T) {
 		t.Error(nums, S, result, realResult)
 	}
 }
+
+func TestCuttingRope(t *testing.T) {
+	var n, expectResult int
+	//n = 2
+	//expectResult = 1
+	//if expectResult != CuttingRope(n) {
+	//	t.Error()
+	//}
+
+	n = 120
+	expectResult = 953271190
+	if expectResult != CuttingRope(n) {
+		t.Error()
+	}
+
+}
